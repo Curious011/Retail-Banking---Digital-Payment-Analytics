@@ -121,10 +121,6 @@ This Power BI reporting system was engineered to deliver actionable, data-driven
 ├── assets/
 │   ├── overview_view.png              # Page 1: Executive Overview screenshot
 │   └── transactions_view.png          # Page 2: Transactions Audit Grid screenshot
-├── data/
-│   ├── customers.csv                  # Customer demographic dataset (5,000 records)
-│   ├── finance_transactions.csv       # Multi-channel transaction records (50,069 records)
-│   └── Data_Dictionary.md             # Detailed column-by-column schema documentation
 ├── DAX_Measures.md                    # Complete DAX formulas & technical reference
 ├── Finance_Analytics_Dashboard.pbix   # Complete interactive Power BI report file
 ├── .gitignore                         # Git exclusion rules for Power BI & cache files
