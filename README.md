@@ -5,7 +5,7 @@
 ![DAX](https://img.shields.io/badge/DAX-Measures_&_Formulas-00758F?style=for-the-badge)
 ![Domain](https://img.shields.io/badge/Domain-Banking_&_Payments-2ea44f?style=for-the-badge)
 
-An interactive, enterprise-grade **Power BI Commercial Banking & Digital Payments Analytics Dashboard** designed to evaluate transaction velocity, diagnose operational payment settlement failures, and uncover customer segment profitability across **50,069 multi-channel transactions** and **₹45.61 Crore ($5.5M+) in gross transaction turnover**.
+An interactive, enterprise-grade **Power BI Commercial Banking & Digital Payments Analytics Dashboard** designed to evaluate transaction volume, diagnose operational payment settlement failures, and analyze customer segment performance across **14.94K transactions** and **₹ 137.53M in annual turnover** (FY 2025 baseline).
 
 > 🔗 **Live Interactive Report**: [Click here to view the live published dashboard](https://app.powerbi.com/view?r=eyJrIjoiMTQ5OTY0YTctN2I2NC00NzMxLWE1NzItZDU2MTA0YTFkZjY2IiwidCI6IjUxMzRkZDExLWZlNDEtNGY3My1iODIyLTg0NDljN2Y1MzA4MCJ9)
 
@@ -14,16 +14,16 @@ An interactive, enterprise-grade **Power BI Commercial Banking & Digital Payment
 ## 📌 Business Problem & Objectives
 
 ### The Business Context
-In commercial retail banking and payment operations, financial institutions process millions of daily transactions across diverse rails—including **UPI, Mobile Banking, Net Banking, Point-of-Sale (POS), ATMs, Auto Debit, and physical Branches**. Without centralized business intelligence, banking executives and operations managers face critical blind spots:
+In commercial retail banking and digital payment operations, financial institutions process thousands of transactions across multiple channels—including **UPI, Mobile Banking, Net Banking, Point-of-Sale (POS), ATMs, Auto Debit, and physical Branches**. Without centralized business intelligence, leadership teams face critical operational blind spots:
 
-1. **Payment Settlement & Failure Friction**: Inability to isolate where and why transactions fail (terminal failures vs. clearing delays), causing customer friction and revenue loss.
-2. **High-Value Drop-Off Cliffs**: Lack of visibility into why high-ticket payments drop off at significantly higher rates, impacting VIP and corporate clientele.
-3. **Geographic Concentration Risk**: Difficulty tracking regional revenue distribution across Indian states to identify saturated vs. underpenetrated growth markets.
-4. **Product-Level Take-Rate Economics**: Inability to evaluate net fee yields and tax collections across distinct transaction categories (Loan EMIs, Deposits, Transfers, Card Payments, and Fee Charges).
+1. **Payment Settlement & Failure Tracking**: Inability to quickly track the ratio of successful vs. failed vs. pending transactions, leading to operational delays and customer friction.
+2. **Regional Revenue Clustering**: Lack of clear geographical visibility into which Indian states drive the majority of transaction volume.
+3. **Product-Level Volume & Fee Contribution**: Inability to evaluate which banking products (Loan EMIs, Transfers, Deposits, Card Payments) generate the bulk of volume and fee income.
+4. **Customer Segment Distribution**: Difficulty analyzing transaction throughput across customer categories (Retail, Premium, SME, Corporate, Wealth).
 
 ### The Analytical Solution
 This Power BI reporting system was engineered to deliver actionable, data-driven answers across two core analytical levels:
-* **Overview Analysis Dashboard**: High-level portfolio tracking, real-time KPI scorecards with Prior Year (PY) and Year-over-Year (YoY) variances, state-level performance benchmarking, monthly seasonality, and customer segment analysis enabled by dynamic **Field Parameters** (`Metric`).
+* **Overview Analysis Dashboard**: High-level portfolio tracking, real-time KPI scorecards with Prior Year (PY) and Year-over-Year (YoY) comparisons, state-level performance benchmarking, monthly seasonality, and customer segment analysis enabled by dynamic **Field Parameters** (`Metric`).
 * **Transactions Audit & Drill-Through Dashboard**: Row-level audit ledger allowing operational teams to seamlessly drill through from high-level visual charts down into granular settlement records by Customer Name, State, Category, and Transaction Status.
 
 ---
@@ -36,69 +36,73 @@ This Power BI reporting system was engineered to deliver actionable, data-driven
 
 ---
 
-## 📈 Key Performance Indicators (KPI Summary)
+## 📈 Key Performance Indicators (FY 2025 Baseline)
 
-### 1. Overall Portfolio Scale & Health (Full Time-Series)
-| Metric | Measure Name | Value | Formatted Display | Business Meaning |
-| :--- | :--- | :---: | :---: | :--- |
-| **Gross Transaction Value (GTV)** | `Total Amount` | **₹456,141,514.47** | **₹45.61 Cr** (456.1M) | Total money processed across all rails |
-| **Total Transactions** | `Total Transaction` | **50,069** | **50.1K** | Total volume of executed payments |
-| **Average Transaction Value (ATV)** | `Avg Transaction Value`| **₹9,110.26** | **9.11K** | Mean transaction size |
-| **Total Service Fees** | `Total Fees` | **₹727,094.06** | **727.1K** | Net operational fee revenue captured (15.9 bps take-rate) |
-| **Total Statutory Tax** | `Total Tax` | **₹130,952.41** | **131.0K** | Total GST / TDS deducted |
-| **Customer Retention** | `Active Customer Base` | **3,983 active** | **79.7%** | 3,983 transacting users vs. 1,017 inactive (20.3% dormant) |
+*These metrics directly match the live online dashboard:*
 
----
-
-### 2. FY 2025 Focused Performance (Dashboard Baseline)
-*Matches the exact live online dashboard display:*
-
-| KPI Card | Current 2025 Value | Prior Year (PY 2024) | YoY % Change | Status Indicator |
+| KPI Card | Current 2025 Value | Prior Year (PY 2024) | YoY % Variance | Visual Indicator |
 | :--- | :---: | :---: | :---: | :---: |
 | **Total Amount** | **₹ 137.53M** | 135.62M | **+1.40%** | 🟢 Upward Growth |
-| **Total Transactions** | **14.94K** | 15.03K | **-0.57%** | 🟡 Stable Volume |
+| **Total Transaction** | **14.94K** | 15.03K | **-0.57%** | 🟡 Stable Volume |
 | **Avg Transaction Value** | **9.20K** | 9.02K | **+1.99%** | 🟢 Higher Ticket Size |
 | **Total Fees** | **₹ 216.94K** | 217.32K | **-0.17%** | 🟡 Steady Revenue |
 | **Total Tax** | **39.04K** | 39.15K | **-0.27%** | 🟡 Steady Collection |
 
 ---
 
-### 3. Settlement Status Performance Grid (FY 2025)
-| Transaction Status | Volume (Txns) | Share (%) | Amount (INR) | Value Share (%) | Operational Impact |
-| :--- | :---: | :---: | :---: | :---: | :--- |
-| **Success** | 12,846 | 85.85% | 117.56M | 85.38% | Cleanly settled transactions |
-| **Failed** | 1,517 | **10.14%** | **14.37M** | **10.44%** | Technical drops, timeouts & card limits |
-| **Pending** | 601 | 4.02% | 5.76M | 4.18% | Clearing pipeline latency / gateway delays |
-| **Total At-Risk (Failed + Pending)**| **2,118** | **14.15%** | **20.13M** | **14.62%** | **Total capital exposed to operational friction** |
+### Transaction Status Breakdown (FY 2025)
+*Directly visible on the **Total Amount by Transaction Status** donut chart:*
+
+| Transaction Status | Share (%) | Total Amount (INR) | Operational Status |
+| :--- | :---: | :---: | :--- |
+| **Success** | **85.37%** | **~₹ 117.4M** | Successfully settled transactions |
+| **Failed** | **10.44%** | **₹ 14.35M** | Technical drops, timeouts & card limits |
+| **Pending** | **4.19%** | **₹ 5.76M** | Clearing delays & gateway latency |
+| **Total** | **100.0%** | **₹ 137.53M** | **Complete 2025 Payment Turnover** |
 
 ---
 
-## 🔍 Deep Analytical Insights
+## 🔍 Deep Analytical Insights (100% Provable on Dashboard)
 
-### 1. Payment Failure Diagnostics & High-Ticket Drop-Off
-* In 2025, **10.4% of total volume (14M across 1,517 transactions) resulted in terminal failure**, with an additional **4.2% (6M) stuck in pending status**, creating a total of **20M in at-risk throughput**.
-* **High-Ticket Cliff**: While transactions below ₹50,000 exhibited a stable ~10% failure rate, **transactions exceeding ₹100,000 spiked to a 21.7% failure rate** (5 out of 23 failed), pinpointing daily bank transfer caps and 2FA authentication timeouts on high-value settlements.
+All insights below can be directly verified by looking at the charts on the dashboard:
+
+### 1. Payment Settlement Failures (₹ 14.35M Stalled)
+* **What the visual shows:** In the **Total Amount by Transaction Status** donut chart, **10.44% of transactions failed (₹ 14.35M)**, with an additional **4.19% (₹ 5.76M)** stuck in pending status.
+* **Business Impact:** Over ₹ 20M in attempted payment volume faced operational friction in 2025, identifying an immediate opportunity to improve payment gateway routing and reduce customer support calls.
 
 ### 2. Geographic Clustering (Top 6 States = 67% of Volume)
-* In 2025, **66.9% (~67%) of total turnover (92M out of 138M)** was concentrated in just 6 states:
-  1. **Maharashtra:** **22M** (21.81M — 15.8%)
-  2. **Karnataka:** **16M** (15.96M — 11.6%)
-  3. **Gujarat:** **15M** (15.38M — 11.2%)
-  4. **Tamil Nadu:** **14M** (13.83M — 10.0%)
-  5. **Uttar Pradesh:** **13M** (13.18M — 9.6%)
-  6. **Madhya Pradesh:** **12M** (12.02M — 8.7%)
-* *Strategic Implication:* High clustering in urban economic centers exposes the institution to regional policy/economic shocks, while high-growth markets like Rajasthan (6.55M), West Bengal (6.33M), and Telangana (5.56M) represent clear expansion opportunities.
+* **What the visual shows:** In the **Total Amount by state** bar chart, **66.9% (~67%) of total volume (₹ 92M out of ₹ 138M)** was concentrated in just 6 states:
+  1. **Maharashtra:** **₹ 22M** (15.8%)
+  2. **Karnataka:** **₹ 16M** (11.6%)
+  3. **Gujarat:** **₹ 15M** (11.2%)
+  4. **Tamil Nadu:** **₹ 14M** (10.0%)
+  5. **Uttar Pradesh:** **₹ 13M** (9.6%)
+  6. **Madhya Pradesh:** **₹ 12M** (8.7%)
+* **Business Impact:** High clustering in top economic hubs shows strong regional brand strength, but also highlights regional dependency compared to underpenetrated states like Haryana (₹ 8M), Kerala (₹ 7M), and Delhi (₹ 7M).
 
-### 3. Product Mix & Debt Servicing Dominance
-* Across the full portfolio, **Loan EMIs (₹131.1M / 28.8%)** and **Fund Transfers (₹120.9M / 26.5%)** account for **55.24% of all monetary turnover**.
-* *Behavioral Finding:* Customers primarily utilize this institution as a debt-servicing and money-movement rail, leaving merchant card spend (₹26.9M / 5.9%) under-monetized.
+### 3. Product Mix: Loan EMIs & Transfers Drive 55.4% of Volume
+* **What the visual shows:** In the **Transaction Type Analysis** matrix table:
+  * **Loan EMI:** **₹ 40.02M** across **2.77K transactions** (generates ₹ 64.03K in fees)
+  * **Transfer:** **₹ 36.17M** across **2.45K transactions** (generates ₹ 55.33K in fees)
+  * **Combined:** Together, these two categories account for **₹ 76.19M (55.4% of the entire ₹ 137.53M turnover)**.
+* **Business Impact:** Customers primarily use the institution for recurring debt payments and fund movements, while daily retail categories like Card Payments (₹ 8.18M) and Bill Payments (₹ 6.45M) represent only ~10.6% combined.
 
-### 4. Customer Acquisition & Dormancy Gap
-* Out of 5,000 registered accounts, **1,017 customers (20.34%) have zero lifetime transactions**, highlighting significant Customer Acquisition Cost (CAC) leakage due to a lack of structured onboarding activation nudges.
+### 4. Customer Segment Distribution (Retail Generates 55% of Volume)
+* **What the visual shows:** In the **Total Amount by Customer Segment** bar chart:
+  * **Retail:** **₹ 76M** (55.3%)
+  * **Premium:** **₹ 26M** (18.9%)
+  * **SME:** **₹ 21M** (15.3%)
+  * **Corporate:** **₹ 9M** (6.5%)
+  * **Wealth:** **₹ 6M** (4.4%)
+* **Business Impact:** Mass retail accounts for the majority of financial throughput, while Premium and SME business accounts provide strong secondary stability contributing a combined ₹ 47M (34.2%).
 
-### 5. Segment Value Disparity (Volume vs. Margin)
-* **Retail** accounts for **55.0% of 2025 volume (75.8M across 8,143 transactions)**.
-* However, **Premium (25.7M / 2,781 txns)** and **SME (21.1M / 2,369 txns)** clients generate the highest annual customer value (**>₹1.18 Lakhs per user**), proving that retaining business and affluent tiers yields higher lifetime revenue per account.
+### 5. Occupation Demographic Distribution
+* **What the visual shows:** In the **Total Amount by occupation** donut chart, transaction volume is evenly balanced across employment types:
+  * **Retired:** **17.7%** (₹ 24.43M)
+  * **Self Employed:** **16.84%** (₹ 23.17M)
+  * **Salaried:** **16.5%** (₹ 22.7M)
+  * **Freelancer:** **15.62%** (₹ 21.48M)
+* **Business Impact:** Consistent adoption across salaried, business, and retired customer segments proves that the banking platform serves a broad demographic base without relying on any single occupation type.
 
 ---
 
@@ -108,10 +112,10 @@ This Power BI reporting system was engineered to deliver actionable, data-driven
   * `customers` (Dimension) $\xrightarrow{1:\infty}$ `finance_transactions` on `customer_id`
   * `calendar table` (Dimension) $\xrightarrow{1:\infty}$ `finance_transactions` on `transaction_date`
   * `Metric` (Field Parameter table) for dynamic visual measure switching
-* **DAX Implementation**: 15+ custom DAX measures utilizing `CALCULATE`, `SAMEPERIODLASTYEAR`, `DIVIDE`, and variable logic (see [DAX_Measures.md](DAX_Measures.md) for full formulas).
+* **DAX Implementation**: Custom measures utilizing `CALCULATE`, `SAMEPERIODLASTYEAR`, `DIVIDE`, and variable logic (see [DAX_Measures.md](DAX_Measures.md) for full formulas).
 * **Dynamic Field Parameters (`Metric`)**: Enables stakeholders to toggle bar charts and categorical visuals between *Total Amount*, *Total Transaction*, *Total Fees*, *Total Tax*, and *Avg Transaction Value* dynamically.
-* **Two-Tier Drill-Through Architecture**: Users can right-click any customer segment, state, or transaction type on Page 1 and drill through to Page 2 with filtered audit records preserved.
-* **Power Query ETL**: Implemented data hygiene transformations to trim whitespace anomalies across channels, resolve typographic artifacts (`M@bile App`), standardize currency codes, and establish a custom date dimension table.
+* **Two-Tier Drill-Through Architecture**: Users can right-click any category on Page 1 and drill through to Page 2 with filtered audit records preserved.
+* **Power Query ETL**: Handled whitespace trimming, resolved typographical anomalies (`M@bile App`), standardized currency formats, and established time-series hierarchies.
 
 ---
 
