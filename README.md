@@ -51,15 +51,15 @@ This Power BI reporting system was engineered to deliver actionable, data-driven
 ---
 
 ### 2. FY 2025 Focused Performance (Dashboard Baseline)
-*Matches the default calendar filter in the interactive dashboard:*
+*Matches the exact live online dashboard display:*
 
 | KPI Card | Current 2025 Value | Prior Year (PY 2024) | YoY % Change | Status Indicator |
 | :--- | :---: | :---: | :---: | :---: |
-| **Total Amount** | **138M** (137.69M) | 136M (135.77M) | **+1.42%** | 🟢 Upward Growth |
-| **Total Transactions** | **15.0K** (14,964) | 15.0K (15,049) | **-0.56%** | 🟡 Stable Volume |
-| **Avg Transaction Value** | **₹9,201.52** | ₹9,021.87 | **+1.99%** | 🟢 Higher Ticket Size |
-| **Total Fees** | **217.3K** (₹217,265.89) | 217.5K (₹217,541.47) | **-0.13%** | 🟡 Steady Revenue |
-| **Total Tax** | **39.1K** (₹39,112.28) | 39.2K (₹39,212.02) | **-0.25%** | 🟡 Steady Collection |
+| **Total Amount** | **₹ 137.53M** | 135.62M | **+1.40%** | 🟢 Upward Growth |
+| **Total Transactions** | **14.94K** | 15.03K | **-0.57%** | 🟡 Stable Volume |
+| **Avg Transaction Value** | **9.20K** | 9.02K | **+1.99%** | 🟢 Higher Ticket Size |
+| **Total Fees** | **₹ 216.94K** | 217.32K | **-0.17%** | 🟡 Steady Revenue |
+| **Total Tax** | **39.04K** | 39.15K | **-0.27%** | 🟡 Steady Collection |
 
 ---
 
