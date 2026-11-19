@@ -43,7 +43,6 @@ This Power BI reporting system was engineered to deliver actionable, data-driven
 | :--- | :--- | :---: | :---: | :--- |
 | **Total Amount** | `Total Amount` | **₹456,141,514.47** | **₹ 456.14M** (₹45.61 Cr) | Gross transaction volume across all payment channels |
 | **Total Transaction** | `Total Transaction` | **50,069** | **50.07K** | Total volume of transactions processed |
-| **Avg Transaction Value** | `Avg Transaction Value` | **₹9,110.26** | **9.11K** | Mean transaction size across entire time-series |
 | **Total Fees** | `Total Fees` | **₹727,094.06** | **₹ 727.09K** | Net service fees captured by the institution |
 | **Total Tax** | `Total Tax` | **₹130,952.41** | **130.95K** (~131K) | Total statutory GST / TDS processed |
 
@@ -69,8 +68,8 @@ This Power BI reporting system was engineered to deliver actionable, data-driven
 | :--- | :---: | :---: | :--- |
 | **Success** | **85.37%** | **~₹ 117.4M** | Successfully settled transactions |
 | **Failed** | **10.44%** | **₹ 14.35M** | Technical drops, timeouts & card limits |
-| **Pending** | **4.19%** | **₹ 5.76M** | Clearing delays & gateway latency |
-| **Total** | **100.0%** | **₹ 137.53M** | **Complete 2025 Payment Turnover** |
+| **Pending** | — | **₹ 5.76M** | Clearing delays & gateway latency |
+| **Total** | **100%** | **₹ 137.53M** | **Complete 2025 Payment Turnover** |
 
 ---
 
@@ -79,37 +78,37 @@ This Power BI reporting system was engineered to deliver actionable, data-driven
 All insights below can be directly verified by looking at the charts on the dashboard:
 
 ### 1. Payment Settlement Failures (₹ 14.35M Stalled)
-* **What the visual shows:** In the **Total Amount by Transaction Status** donut chart, **10.44% of transactions failed (₹ 14.35M)**, with an additional **4.19% (₹ 5.76M)** stuck in pending status.
+* **What the visual shows:** In the **Total Amount by Transaction Status** donut chart, **10.44% of transactions failed (₹ 14.35M)**, with an additional **₹ 5.76M** stuck in pending status.
 * **Business Impact:** Over ₹ 20M in attempted payment volume faced operational friction in 2025, identifying an immediate opportunity to improve payment gateway routing and reduce customer support calls.
 
-### 2. Geographic Clustering (Top 6 States = 67% of Volume)
-* **What the visual shows:** In the **Total Amount by state** bar chart, **66.9% (~67%) of total volume (₹ 92M out of ₹ 138M)** was concentrated in just 6 states:
-  1. **Maharashtra:** **₹ 22M** (15.8%)
-  2. **Karnataka:** **₹ 16M** (11.6%)
-  3. **Gujarat:** **₹ 15M** (11.2%)
-  4. **Tamil Nadu:** **₹ 14M** (10.0%)
-  5. **Uttar Pradesh:** **₹ 13M** (9.6%)
-  6. **Madhya Pradesh:** **₹ 12M** (8.7%)
+### 2. Geographic Clustering (Top 6 States = ₹ 92M of Volume)
+* **What the visual shows:** In the **Total Amount by state** bar chart, **₹ 92M out of the ₹ 138M volume** was concentrated in just 6 states:
+  1. **Maharashtra:** **₹ 22M**
+  2. **Karnataka:** **₹ 16M**
+  3. **Gujarat:** **₹ 15M**
+  4. **Tamil Nadu:** **₹ 14M**
+  5. **Uttar Pradesh:** **₹ 13M**
+  6. **Madhya Pradesh:** **₹ 12M**
 * **Business Impact:** High clustering in top economic hubs shows strong regional brand strength, but also highlights regional dependency compared to underpenetrated states like Haryana (₹ 8M), Kerala (₹ 7M), and Delhi (₹ 7M).
 
-### 3. Product Mix: Loan EMIs & Transfers Drive 55.4% of Volume
+### 3. Product Mix: Loan EMIs & Transfers Lead Turnover
 * **What the visual shows:** In the **Transaction Type Analysis** matrix table:
   * **Loan EMI:** **₹ 40.02M** across **2.77K transactions** (generates ₹ 64.03K in fees)
   * **Transfer:** **₹ 36.17M** across **2.45K transactions** (generates ₹ 55.33K in fees)
-  * **Combined:** Together, these two categories account for **₹ 76.19M (55.4% of the entire ₹ 137.53M turnover)**.
-* **Business Impact:** Customers primarily use the institution for recurring debt payments and fund movements, while daily retail categories like Card Payments (₹ 8.18M) and Bill Payments (₹ 6.45M) represent only ~10.6% combined.
+  * **Combined:** Together, these two categories account for **₹ 76.19M** of the total **₹ 137.53M** turnover.
+* **Business Impact:** Customers primarily use the institution for recurring debt payments and fund movements, while daily retail categories like Card Payments (₹ 8.18M) and Bill Payments (₹ 6.45M) account for ₹ 14.63M combined.
 
-### 4. Customer Segment Distribution (Retail Generates 55% of Volume)
+### 4. Customer Segment Distribution (Retail Generates ₹ 76M)
 * **What the visual shows:** In the **Total Amount by Customer Segment** bar chart:
-  * **Retail:** **₹ 76M** (55.3%)
-  * **Premium:** **₹ 26M** (18.9%)
-  * **SME:** **₹ 21M** (15.3%)
-  * **Corporate:** **₹ 9M** (6.5%)
-  * **Wealth:** **₹ 6M** (4.4%)
-* **Business Impact:** Mass retail accounts for the majority of financial throughput, while Premium and SME business accounts provide strong secondary stability contributing a combined ₹ 47M (34.2%).
+  * **Retail:** **₹ 76M**
+  * **Premium:** **₹ 26M**
+  * **SME:** **₹ 21M**
+  * **Corporate:** **₹ 9M**
+  * **Wealth:** **₹ 6M**
+* **Business Impact:** Mass retail accounts for the majority of financial throughput, while Premium and SME business accounts provide strong secondary stability contributing a combined ₹ 47M.
 
 ### 5. Occupation Demographic Distribution
-* **What the visual shows:** In the **Total Amount by occupation** donut chart, transaction volume is evenly balanced across employment types:
+* **What the visual shows:** In the **Total Amount by occupation** donut chart, transaction volume displays labels across employment types:
   * **Retired:** **17.7%** (₹ 24.43M)
   * **Self Employed:** **16.84%** (₹ 23.17M)
   * **Salaried:** **16.5%** (₹ 22.7M)
