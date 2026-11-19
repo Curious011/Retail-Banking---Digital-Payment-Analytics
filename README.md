@@ -61,7 +61,7 @@ This Power BI reporting system was engineered to deliver actionable, data-driven
 
 ---
 
-### Transaction Status Breakdown (FY 2025)
+### 3. Transaction Status Breakdown (FY 2025)
 *Directly visible on the **Total Amount by Transaction Status** donut chart:*
 
 | Transaction Status | Share (%) | Total Amount (INR) | Operational Status |
@@ -98,16 +98,7 @@ All insights below can be directly verified by looking at the charts on the dash
   * **Combined:** Together, these two categories account for **₹ 76.19M** of the total **₹ 137.53M** turnover.
 * **Business Impact:** Customers primarily use the institution for recurring debt payments and fund movements, while daily retail categories like Card Payments (₹ 8.18M) and Bill Payments (₹ 6.45M) account for ₹ 14.63M combined.
 
-### 4. Customer Segment Distribution (Retail Generates ₹ 76M)
-* **What the visual shows:** In the **Total Amount by Customer Segment** bar chart:
-  * **Retail:** **₹ 76M**
-  * **Premium:** **₹ 26M**
-  * **SME:** **₹ 21M**
-  * **Corporate:** **₹ 9M**
-  * **Wealth:** **₹ 6M**
-* **Business Impact:** Mass retail accounts for the majority of financial throughput, while Premium and SME business accounts provide strong secondary stability contributing a combined ₹ 47M.
-
-### 5. Occupation Demographic Distribution
+### 4. Occupation Demographic Distribution
 * **What the visual shows:** In the **Total Amount by occupation** donut chart, transaction volume displays labels across employment types:
   * **Retired:** **17.7%** (₹ 24.43M)
   * **Self Employed:** **16.84%** (₹ 23.17M)
@@ -117,16 +108,42 @@ All insights below can be directly verified by looking at the charts on the dash
 
 ---
 
-## 🛠️ Data Model & Technical Implementation
+## 🛠️ Data Architecture & Modeling
 
-* **Schema Architecture**: Built on a relational **Star Schema** centered on the `finance_transactions` fact table:
-  * `customers` (Dimension) $\xrightarrow{1:\infty}$ `finance_transactions` on `customer_id`
-  * `calendar table` (Dimension) $\xrightarrow{1:\infty}$ `finance_transactions` on `transaction_date`
-  * `Metric` (Field Parameter table) for dynamic visual measure switching
-* **DAX Implementation**: Custom measures utilizing `CALCULATE`, `SAMEPERIODLASTYEAR`, `DIVIDE`, and variable logic (see [DAX_Measures.md](DAX_Measures.md) for full formulas).
-* **Dynamic Field Parameters (`Metric`)**: Enables stakeholders to toggle bar charts and categorical visuals between *Total Amount*, *Total Transaction*, *Total Fees*, *Total Tax*, and *Avg Transaction Value* dynamically.
-* **Two-Tier Drill-Through Architecture**: Users can right-click any category on Page 1 and drill through to Page 2 with filtered audit records preserved.
-* **Power Query ETL**: Handled whitespace trimming, resolved typographical anomalies (`M@bile App`), standardized currency formats, and established time-series hierarchies.
+The reporting model is structured as an optimized **Star Schema** to ensure high query performance and seamless cross-filtering:
+
+```text
+       ┌──────────────┐         ┌──────────────┐
+       │  customers   │         │calendar table│
+       │ (Dimension)  │         │ (Dimension)  │
+       └──────┬───────┘         └──────┬───────┘
+              │ 1                      │ 1
+              │                        │
+              │ *                      │ *
+       ┌──────┴────────────────────────┴───────┐
+       │          finance_transactions         │
+       │                 (FACT)                │
+       └───────────────────────────────────────┘
+                          │
+                          │ (Utility)
+       ┌──────────────────┴────────────────────┐
+       │                Metric                 │
+       │       (Dynamic Field Parameter)       │
+       └───────────────────────────────────────┘
+```
+
+* **Fact Table**:
+  * `finance_transactions` (50,069 records): Transaction-level operational fact table storing transaction amounts, fee amounts, tax amounts, channel, merchant category, status, and risk metrics.
+* **Dimension Tables**:
+  * `customers` (5,000 records): Customer demographic dimension containing `customer_id`, city, state, customer segment, annual income, and occupation.
+  * `calendar table`: Dedicated date dimension table providing month names, years, date hierarchies, and chronological sort keys.
+* **Disconnected Utility Table**:
+  * `Metric`: Disconnected dynamic field parameter table supporting 1-click measure switching across visual headers without canvas clutter.
+* **Relationships**:
+  * `customers[customer_id]` 1 $\rightarrow$ * `finance_transactions[customer_id]` (1-to-Many, Single Direction)
+  * `calendar table[Date]` 1 $\rightarrow$ * `finance_transactions[transaction_date]` (1-to-Many, Single Direction)
+* **DAX Implementation**: 15+ custom DAX measures utilizing `CALCULATE`, `SAMEPERIODLASTYEAR`, `DIVIDE`, and variable logic (see [DAX_Measures.md](DAX_Measures.md) for full code).
+* **Two-Tier Drill-Through Navigation**: Users can right-click any category on Page 1 and drill through to Page 2 with filtered audit records preserved.
 
 ---
 
