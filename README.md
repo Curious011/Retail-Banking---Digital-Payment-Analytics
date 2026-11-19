@@ -5,7 +5,7 @@
 ![DAX](https://img.shields.io/badge/DAX-Measures_&_Formulas-00758F?style=for-the-badge)
 ![Domain](https://img.shields.io/badge/Domain-Banking_&_Payments-2ea44f?style=for-the-badge)
 
-An interactive, enterprise-grade **Power BI Commercial Banking & Digital Payments Analytics Dashboard** designed to evaluate transaction volume, diagnose operational payment settlement failures, and analyze customer segment performance across **14.94K transactions** and **₹ 137.53M in annual turnover** (FY 2025 baseline).
+An interactive, enterprise-grade **Power BI Commercial Banking & Digital Payments Analytics Dashboard** designed to evaluate transaction volume, diagnose operational payment settlement failures, and analyze customer segment performance across **50,069 multi-channel transactions** totaling **₹ 456.14M (₹45.61 Cr)**, with a dedicated operational baseline for **FY 2025 (14.94K transactions | ₹ 137.53M)**.
 
 > 🔗 **Live Interactive Report**: [Click here to view the live published dashboard](https://app.powerbi.com/view?r=eyJrIjoiMTQ5OTY0YTctN2I2NC00NzMxLWE1NzItZDU2MTA0YTFkZjY2IiwidCI6IjUxMzRkZDExLWZlNDEtNGY3My1iODIyLTg0NDljN2Y1MzA4MCJ9)
 
@@ -36,9 +36,21 @@ This Power BI reporting system was engineered to deliver actionable, data-driven
 
 ---
 
-## 📈 Key Performance Indicators (FY 2025 Baseline)
+## 📈 Key Performance Indicators (KPI Summary)
 
-*These metrics directly match the live online dashboard:*
+### 1. Overall Portfolio Scale (All-Time Full Dataset)
+| Metric | Measure Name | Exact Value | Power BI Formatted Display | Business Meaning |
+| :--- | :--- | :---: | :---: | :--- |
+| **Total Amount** | `Total Amount` | **₹456,141,514.47** | **₹ 456.14M** (₹45.61 Cr) | Gross transaction volume across all payment channels |
+| **Total Transaction** | `Total Transaction` | **50,069** | **50.07K** | Total volume of transactions processed |
+| **Avg Transaction Value** | `Avg Transaction Value` | **₹9,110.26** | **9.11K** | Mean transaction size across entire time-series |
+| **Total Fees** | `Total Fees` | **₹727,094.06** | **₹ 727.09K** | Net service fees captured by the institution |
+| **Total Tax** | `Total Tax` | **₹130,952.41** | **130.95K** (~131K) | Total statutory GST / TDS processed |
+
+---
+
+### 2. FY 2025 Focused Performance (Live Dashboard Baseline)
+*These metrics directly match the live online dashboard display:*
 
 | KPI Card | Current 2025 Value | Prior Year (PY 2024) | YoY % Variance | Visual Indicator |
 | :--- | :---: | :---: | :---: | :---: |
